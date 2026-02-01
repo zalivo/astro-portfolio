@@ -1,0 +1,56 @@
+---
+const skills = [
+  "Webflow",
+  "Figma",
+  "Wireframing",
+  "JavaScript",
+  "React",
+  "Tailwind",
+  "Condens",
+];
+
+const quests = [
+  {
+    title: "Twitch based text game - FeelsRaidMan",
+    url: "https://feelsraidman.lol",
+  }
+];
+
+const interests = [
+  "Drones",
+  "Reading",
+];
+---
+<section>
+    <div>
+      <h3 class="text-xl mb-3">Skills</h3>
+      <p class="text-base sm:text-lg text-white/80">{skills.join(" • ")}</p>
+    </div>
+
+    <div class="my-3">
+      <h3 class="text-xl mb-3">Current Quests</h3>
+      <ul class="space-y-2">
+        {quests.map((quest) => (
+          <li class="text-base sm:text-lg text-white/80">
+            {quest.url ? (
+              <a
+                href={quest.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-my-green transition-colors underline"
+              >
+                {quest.title}
+              </a>
+            ) : (
+              <span>{quest.title}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-xl mb-3">Interests</h3>
+      <p class="text-base sm:text-lg text-white/80">{interests.join(", ")}</p>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-my-green: #62D6AD;
+  --font-grotesk: "Space Grotesk", sans-serif;
+}
+
+body {
+  background: #1e1f21;
+  color: white;
+}
+
+@utility container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
