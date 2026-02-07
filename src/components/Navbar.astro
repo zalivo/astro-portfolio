@@ -1,16 +1,16 @@
 <nav class="flex items-center justify-between pb-8">
   <a
-    href="/"
+    href={import.meta.env.BASE_URL}
     class="text-lg sm:text-3xl font-semibold text-my-green hover:opacity-80 transition-opacity"
   >
     Ivo Žaloudek
   </a>
   <div class="flex gap-4 sm:gap-6 text-sm sm:text-base">
     <a
-      href="#projects"
-      class="text-white/70 hover:text-my-green transition-colors"
+      href={`${import.meta.env.BASE_URL}/blog`}
+      class="text-white hover:text-my-green transition-colors"
     >
-      Projects
+      Blog
     </a>
   </div>
 </nav>
