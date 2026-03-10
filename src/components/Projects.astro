@@ -9,6 +9,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Highlight Stack",
+    description: "Paste an article URL. Highlight what matters. Share your throughts with your friends.",
+    url: "https://highlightstack.com/",
+  },
+  {
     title: "Accessible Art with Conversational Agents for Visually Impaired People",
     description: "Master thesis, University of Twente.",
     url: "https://purl.utwente.nl/essays/108556",
@@ -64,29 +69,3 @@ const projects: Project[] = [
   </div>
 </section>
 
-<script>
-  let ctx: AudioContext | null = null;
-
-  function playPop() {
-    if (!ctx) ctx = new AudioContext();
-
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    osc.type = "sine";
-    osc.frequency.value = 600;
-
-    gain.gain.setValueAtTime(0.06, ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.03);
-
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-
-    osc.start(ctx.currentTime);
-    osc.stop(ctx.currentTime + 0.03);
-  }
-
-  document.querySelectorAll("a[data-project]").forEach((el) => {
-    el.addEventListener("mouseenter", playPop);
-  });
-</script>
